@@ -16,4 +16,4 @@ jobs:
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: false # Set to true to delete files on Neocities not in your repo
-          dist_dir: ./ # The folder containing your site files
+          dist_dir: public # The folder containing your site files
