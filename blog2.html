@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PieIsSpy</title>
+    </head>
+    <body>
+        <h1>blog2</h1>
+        <a href="blogs.html">back</a>
+
+        <p>
+            Supported Parameter Passing Methods:
+            <ul>
+                <li><a href="#pass-by-value">Pass by Value (Primarily)</a></li>
+                <li><a href="#pass-by-reference">Pass by Reference (Through Reference Classes)</a></li>
+            </ul>
+        </p>
+
+        <h2 id="pass-by-value">Pass by Value</h2>
+        <p>
+            In R, parameters are strictly passed by value, meaning values passed into the function are copied into the parameter. Consider the following code block:
+            <pre>
+<code>
+change 	&lt- function(y) {
+  y = 7
+  print(y) # y has a value of 7
+}
+
+x = 6
+print(x)
+change(x)
+print(x) # x's value is still 6
+</code>
+            </pre>
+
+            When the global variable x is passed though change(), the parameter y copies the value of x, and changes its value to 7. However, printing x after the function call shows that the original value is still there.
+        </p>
+
+        <p>
+            Most objects are also passed by value, due to them being immutable. Whatever change the function does to the parameter does not change the values of the object being passed. Consider the following code block:
+
+            <pre>
+<code>
+modifier &lt- function(y) {
+  print(y)
+  y[1] = 7
+  y[2] = 8
+  y[3] = 9
+  print(y) # y has values 7, 8 and 9
+}
+x &lt- c(6,8,7)
+print(x)
+modifier(x)
+print(x) # x still has values 6, 8, 7
+</code>
+            </pre>
+            
+            Passing x to modifier() copies the array into y, and modifier() changes its elements. But when x is printed again after the function call, the original array is retained.
+        </p>
+
+        <h2 id="pass-by-reference">Pass by Reference (Through Reference Classes)</h2>
+        <p>
+            Although most objects in R are pass-by-value, R also have built-in Reference Objects, wherein any variables pointing to that particular object have the same exact copy. Consider the following code block:
+            <pre>
+<code>
+library(methods)
+
+Owl &lt- setRefClass(
+  "Owl",
+  fields = list(
+    size = "numeric",
+    color = "character"
+  ),
+  methods = list(
+    initialize = function(size = 0, color = "Unknown") {
+      .self$size &lt- size
+      .self$color &lt- color
+    }
+  )
+)
+
+editOwl &lt- function(avian) {
+  # the parameter avian copies the pointer to the same object
+  # and edit its contents
+  avian$color = "Blue"
+  avian$size = 10
+}
+
+# make an instance of an Owl
+bird &lt- Owl$new(size = 4, color = "Red")
+print(bird$size)
+print(bird$color)
+
+editOwl(bird)
+
+# original object is edited
+print(bird$size)
+print(bird$color)
+</code>
+            </pre>
+
+            When passing the bird object to editOwl(), the reference pointer pointing towards it is COPIED to the function parameter. So when the function edits the attributes of the object avian, the object bird’s attributes are also changed. In a way, this is not truly pass-by-reference due to the fact that the original object’s pointer is COPIED to the function, therefore only emulating pass-by-reference and is still upholding the strict implementation of only pass-by-value parameters.
+        </p>
+
+        <pre>
+References:
+    https://homepage.divms.uiowa.edu/~luke/R/references.html
+    https://www.rdocumentation.org/packages/methods/versions/3.6.2/topics/ReferenceClasses
+    https://www.geeksforgeeks.org/r-language/creating-initialize-method-for-reference-class-in-r/
+        </pre>
+
+    </body>
+</html>

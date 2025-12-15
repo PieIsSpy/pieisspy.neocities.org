@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PieIsSpy</title>
+    </head>
+    <body>
+        <h1>blog1</h1>
+        <a href="blogs.html">back</a>
+        <p>
+            In C, a function pointer is a pointer that stores the address of the function. <br>
+            Syntax: <code>&ltreturn type&gt (*&ltpointer name&gt)(&ltparameter types&gt)</code> <br>
+            Example: <code>int (*computeArea)(int, int);</code>
+        </p>
+
+        <p>
+            To initalize a function pointer, we can assign the pointer with the address of the function:
+            <code>
+                computeArea = &computeSquareArea; <br>
+                computeArea = computeArea; // this can also be used
+            </code>
+        </p>
+
+        <p>
+            This can be used to create functions inside of a struct, similar to how objects in java have internal methods. For example: <br>
+            <pre>
+<code>
+typedef struct entityTag {
+    int hp;
+    int speed;
+    int def;
+    int (*isAlive)(struct entityTag);
+    void (*takeDamage)(struct entityTag*, int);
+} Entity;
+
+int isAlive(Entity entity) {
+    return entity.hp > 0;
+}
+
+void takeDamage(Entity* entity, int damage) {
+    entity->hp -= damage;
+}
+
+Entity newEntity(int hp, int def, int speed) {
+    Entity temp = {hp, def, speed, isAlive, takeDamage}; //another way of declaring a struct variable
+    return temp;
+}
+
+int main() {
+    Entity entity = newEntity(10, 6, 3);
+    printf("isAlive: %d\n", entity.isAlive(entity));
+    entity.takeDamage(&entity, 10);
+    printf("isAlive: %d\n", entity.isAlive(entity));
+
+    return 0;
+}
+</code>
+            </pre>
+        </p>
+
+        <p>
+            By layering structs and having function pointers as some of their components, we can replicate some concepts of the OOP paradigm in C:
+            <pre>
+<code>
+typedef struct entityStructTag {
+    int hp;
+    int speed;
+    int def;
+    int (*isAlive)(struct entityStructTag);
+    void (*takeDamage)(struct entityStructTag*, int);
+} Entity;
+
+typedef struct roaringKnightTag {
+    Entity super; // the "object" RoaringKnight extends to Entity
+    int (*checkPhase)(struct roaringKnightTag);
+} RoaringKnight;
+</code>
+            </pre>
+        </p>
+
+        <p>
+            If a function can have a pointer variable to it, then it can also be passed to a function. This is called a callback function. The parameter to pass a function pointer follows the same concept as declaring a function pointer, except a parameter name will be used.
+            <pre>
+<code>
+int pkStarstorm(int damage) {
+    return 50 * damage;
+}
+
+int pkFlash(int damage) {
+    int random = rand();
+    if (random > 50)
+        return 100 * damage;
+    else
+        return 0;
+}
+
+int pkBeam(int damage) {
+    int min = 1;
+    int max = 50;
+    int random = (rand() % (max - min + 1)) + min;
+
+    return 2000 + damage * random;
+}
+
+int attack(int (*callback)(int), int damage) {
+    return callback(damage);
+}
+
+int main() {
+    printf("pkStarstorm = %d\n", attack(pkStarstorm, 50));
+    printf("pkFlash = %d\n", attack(pkFlash, 50));
+    printf("pkBeam = %d\n", attack(pkBeam, 50));
+	
+    return 0;
+}
+</code>
+            </pre>
+        </p>
+
+        <p>
+            In conclusion, a function pointer is a pointer that stores the address of the function specified while a callback function is a function pointer passed into a function that will use it to allow the parent function to have different behaviors without changing its core algorithm.
+<pre>
+References:
+    Function Pointer in C. (2025, July 26). GeeksforGeeks. Retrieved September 1, 2025, from https://www.geeksforgeeks.org/c/function-pointer-in-c/
+    Tontoni, A. (2022, April 25). UML in C Language — Class Diagrams. Medium. Retrieved September 1, 2025, from https://levelup.gitconnected.com/uml-in-c-language-class-diagrams-6ed11aa34d9b
+    Callbacks in C. (2025, July 26). GeeksforGeeks. Retrieved September 1, 2025, from https://www.geeksforgeeks.org/c/callbacks-in-c/
+</pre>
+        </p>
+    </body>
+</html>
