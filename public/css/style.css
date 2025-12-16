@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,6 +8,9 @@ body {
 
     margin-left: 250px;
     margin-right: 250px;
+
+    font-family: "Open Sans", "Segoe UI";
+    font-size: small;
 }
 
 header, footer {
@@ -23,9 +28,11 @@ header, footer {
 }
 
 #content, #navigation {
-    border: 3px solid skyblue;
-    background-color:paleturquoise;
+    border: 3px solid rgba(135, 206, 235, 0.4);
+    background-color: rgba(127, 238, 238, 0.4);
     border-radius: 10px;
+    backdrop-filter: blur(2px);
+
     padding: 10px;
 }
 
@@ -38,9 +45,17 @@ footer {
     flex-direction: row;
     gap: 10px;
 
-    border: 3px solid skyblue;
-    background-color: paleturquoise;
+    border: 3px solid rgba(135, 206, 235, 0.4);
+    background-color: rgba(127, 238, 238, 0.4);
     border-radius: 10px;
 
     padding: 5px;
+}
+
+body {
+    background-image: url("https://i.redd.it/jcaq7gsamypc1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
