@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: row;
+
+    text-align: center;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#content, #navigation {
+    border: 3px solid skyblue;
+    background-color:paleturquoise;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+#footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    border: 3px solid skyblue;
+    background-color: paleturquoise;
+    border-radius: 10px;
+
+    padding: 5px;
+}
