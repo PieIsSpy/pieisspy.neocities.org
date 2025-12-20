@@ -64,3 +64,15 @@ body {
 #content {
     width: 631px;
 }
+
+.code, .inline-code {
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgba(255, 213, 0, .5);
+    backdrop-filter: blur(2px);
+}
+
+.code {
+    padding-left: 15px;
+    padding-right: 15px;
+}
