@@ -3,7 +3,7 @@ function constructHeader() {
     const content = document.createElement("h1");
     const link = document.createElement("a");
 
-    link.setAttribute("href", "index.html");
+    link.setAttribute("href", "/public/index.html");
     link.textContent = "PieIsSpy"
 
     content.appendChild(link);
@@ -22,7 +22,7 @@ function constructNavigation() {
         const content = document.createElement("li");
         const link = document.createElement("a");
 
-        link.setAttribute("href", navComponent + ".html");
+        link.setAttribute("href", "/public/" + navComponent + ".html");
         link.textContent = navComponent;
 
         content.appendChild(link);
