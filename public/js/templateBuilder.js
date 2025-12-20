@@ -12,7 +12,7 @@ function constructHeader() {
 
 function constructNavigation() {
     const nav = document.querySelector("#navigation");
-    const navList = ["/blogs", "/changelogs"];
+    const navList = ["blogs", "changelogs"];
     
     const label = document.createElement("h2");
     label.textContent = "Navigation";
@@ -22,7 +22,7 @@ function constructNavigation() {
         const content = document.createElement("li");
         const link = document.createElement("a");
 
-        link.setAttribute("href", navComponent + ".html");
+        link.setAttribute("href", "/" + navComponent + ".html");
         link.textContent = navComponent;
 
         content.appendChild(link);
