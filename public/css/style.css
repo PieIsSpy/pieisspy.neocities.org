@@ -27,16 +27,21 @@ header, footer {
     gap: 10px;
 }
 
-#content, #navigation, #footer-links {
+section, #navigation, #footer-links {
     border: 3px solid rgba(135, 206, 235, 0.6);
     background-color: rgba(127, 238, 238, 0.6);
 }
 
-#content, #navigation {
+section, #navigation, #footer-links {
     border-radius: 10px;
     backdrop-filter: blur(2px);
+    border-radius: 10px;
 
     padding: 10px;
+}
+
+section {
+    margin-bottom: 5px;
 }
 
 footer {
@@ -47,8 +52,6 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
-    border-radius: 10px;
 
     padding: 5px;
 }
@@ -63,6 +66,10 @@ body {
 
 #content {
     width: 631px;
+}
+
+#navigation {
+    width: 130px;
 }
 
 .code, .inline-code {
