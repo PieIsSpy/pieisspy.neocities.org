@@ -14,27 +14,19 @@
             <div id="navigation"></div>
 
             <div id="content">
-        <h2>Function Pointers and Callback Functions</h2>
-        <h3>9/1/2025</h3>
-        <p>
-            In C, a function pointer is a pointer that stores the address of the function. <br>
-            Syntax: <code class="inline-code">&ltreturn type&gt (*&ltpointer name&gt)(&ltparameter types&gt)</code> <br>
-            Example: <code class="inline-code">int (*computeArea)(int, int);</code>
-        </p>
+                <section>
+                    <h2>Function Pointers and Callback Functions</h2>
+                    <h3>9/1/2025</h3>
 
-        <p>
-            To initalize a function pointer, we can assign the pointer with the address of the function:
+                    <p>
+                        In C, a function pointer is a pointer that stores the address of the function. <br>
+                        Syntax: <code class="inline-code">&ltreturn type&gt (*&ltpointer name&gt)(&ltparameter types&gt)</code> <br>
+                        Example: <code class="inline-code">int (*computeArea)(int, int);</code>
+                    </p>
 
-<pre class="code"><code>
-computeArea = &#38computeSquareArea;
-computeArea = computeArea; // this can also be 
-
-</code></pre>
-
-        </p>
-
-        <p>
-            This can be used to create functions inside of a struct, similar to how objects in java have internal methods. For example: <br>
+                    <p>
+                        To initalize a function pointer, we can assign the pointer with the address of the function:
+                    </p>
 
 <pre class="code"><code>
 typedef struct entityTag {
@@ -69,10 +61,10 @@ int main() {
 }
 
 </code></pre>
-        </p>
 
-        <p>
-            By layering structs and having function pointers as some of their components, we can replicate some concepts of the OOP paradigm in C:
+                    <p>
+                        By layering structs and having function pointers as some of their components, we can replicate some concepts of the OOP paradigm in C:
+                    </p>
 
 <pre class="code"><code>
 typedef struct entityStructTag {
@@ -90,10 +82,9 @@ typedef struct roaringKnightTag {
 
 </code></pre>
 
-        </p>
-
-        <p>
-            If a function can have a pointer variable to it, then it can also be passed to a function. This is called a callback function. The parameter to pass a function pointer follows the same concept as declaring a function pointer, except a parameter name will be used.
+                    <p>
+                        If a function can have a pointer variable to it, then it can also be passed to a function. This is called a callback function. The parameter to pass a function pointer follows the same concept as declaring a function pointer, except a parameter name will be used.
+                    </p>
 
 <pre class="code"><code>
 int pkStarstorm(int damage) {
@@ -130,21 +121,19 @@ int main() {
 
 </code></pre>
 
-        </p>
+                    <p>
+                        In conclusion, a function pointer is a pointer that stores the address of the function specified while a callback function is a function pointer passed into a function that will use it to allow the parent function to have different behaviors without changing its core algorithm.
+                    </p>
+                </section>
 
-        <p>
-            In conclusion, a function pointer is a pointer that stores the address of the function specified while a callback function is a function pointer passed into a function that will use it to allow the parent function to have different behaviors without changing its core algorithm.
-<pre>
-References:
-    Function Pointer in C. (2025, July 26). GeeksforGeeks. Retrieved September 1, 2025, 
-        from https://www.geeksforgeeks.org/c/function-pointer-in-c/
-    Tontoni, A. (2022, April 25). UML in C Language — Class Diagrams. Medium. 
-        Retrieved September 1, 2025, from 
-        https://levelup.gitconnected.com/uml-in-c-language-class-diagrams-6ed11aa34d9b
-    Callbacks in C. (2025, July 26). GeeksforGeeks. Retrieved September 1, 2025, 
-        from https://www.geeksforgeeks.org/c/callbacks-in-c/
-</pre>
-        </p>
+                <section>
+                    <h3>References:</h3>
+                    <ul>
+                        <li>https://www.geeksforgeeks.org/c/function-pointer-in-c/</li>
+                        <li>https://levelup.gitconnected.com/uml-in-c-language-class-diagrams-6ed11aa34d9b</li>
+                        <li>https://www.geeksforgeeks.org/c/callbacks-in-c/</li>
+                    </ul>
+                </section>
             </div>
         </div>
 
