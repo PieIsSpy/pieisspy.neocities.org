@@ -1,0 +1,13 @@
+<pre class="code"><code>
+modifier &lt- function(y) {
+  print(y)
+  y[1] = 7
+  y[2] = 8
+  y[3] = 9
+  print(y) # y has values 7, 8 and 9
+}
+x &lt- c(6,8,7)
+print(x)
+modifier(x)
+print(x) # x still has values 6, 8, 7
+</code></pre>

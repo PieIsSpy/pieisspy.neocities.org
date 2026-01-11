@@ -1,0 +1,35 @@
+<pre class="code"><code>
+library(methods)
+
+Owl &lt- setRefClass(
+  "Owl",
+  fields = list(
+    size = "numeric",
+    color = "character"
+  ),
+  methods = list(
+    initialize = function(size = 0, color = "Unknown") {
+      .self$size &lt- size
+      .self$color &lt- color
+    }
+  )
+)
+
+editOwl &lt- function(avian) {
+  # the parameter avian copies the pointer to the same object
+  # and edit its contents
+  avian$color = "Blue"
+  avian$size = 10
+}
+
+# make an instance of an Owl
+bird &lt- Owl$new(size = 4, color = "Red")
+print(bird$size)
+print(bird$color)
+
+editOwl(bird)
+
+# original object is edited
+print(bird$size)
+print(bird$color)
+</code></pre>
