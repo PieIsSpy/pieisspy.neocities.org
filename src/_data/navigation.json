@@ -1,4 +1,9 @@
 [
-    { "text": "blogs" },
-    { "text": "changelogs" }
+    {
+        "text": "blogs"
+    },
+
+    {
+        "text": "changelogs"
+    }
 ]
