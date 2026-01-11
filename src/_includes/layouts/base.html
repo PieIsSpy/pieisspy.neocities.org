@@ -4,15 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }}</title>
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         {% include "partials/header.html" %}
 
-        <main tabindex="-1" id="content">
+        <main tabindex="-1" id="main">
             {% include "partials/navigation.html" %}
-            {% block content %}
-                {{ content | safe }}
-            {% endblock %}
+
+            <div id="content">
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock %}
+            </div>
         </main>
 
         {% include "partials/footer.html" %}
