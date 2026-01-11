@@ -1,0 +1,8 @@
+<footer>
+    <div id="footer-links">
+        © PieIsSpy 2026
+        {% for item in footer %}
+            <a href="{{ item.link }}">{{ item.text }}</a>
+        {% endfor %}
+    </div>
+</footer>
