@@ -1,0 +1,32 @@
+<pre class="code"><code>
+typedef struct entityTag {
+    int hp;
+    int speed;
+    int def;
+    int (*isAlive)(struct entityTag);
+    void (*takeDamage)(struct entityTag*, int);
+} Entity;
+
+int isAlive(Entity entity) {
+    return entity.hp > 0;
+}
+
+void takeDamage(Entity* entity, int damage) {
+    entity->hp -= damage;
+}
+
+Entity newEntity(int hp, int def, int speed) {
+    //another way of declaring a struct variable
+    Entity temp = {hp, def, speed, isAlive, takeDamage};
+    return temp;
+}
+
+int main() {
+    Entity entity = newEntity(10, 6, 3);
+    printf("isAlive: %d\n", entity.isAlive(entity));
+    entity.takeDamage(&entity, 10);
+    printf("isAlive: %d\n", entity.isAlive(entity));
+
+    return 0;
+}
+</code></pre>

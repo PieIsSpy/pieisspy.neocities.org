@@ -1,0 +1,14 @@
+<pre class="code"><code>
+typedef struct entityStructTag {
+    int hp;
+    int speed;
+    int def;
+    int (*isAlive)(struct entityStructTag);
+    void (*takeDamage)(struct entityStructTag*, int);
+} Entity;
+
+typedef struct roaringKnightTag {
+    Entity super; // the "object" RoaringKnight extends to Entity
+    int (*checkPhase)(struct roaringKnightTag);
+} RoaringKnight;
+</code></pre>

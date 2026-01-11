@@ -1,0 +1,43 @@
+---
+title: 'PieIsSpy'
+layout: 'layouts/base.html'
+---
+<section>
+    <h2>Function Pointers and Callback Functions</h2>
+    <h3>9/1/2025</h3>
+
+    <p>
+        In C, a function pointer is a pointer that stores the address of the function. <br>
+        Syntax: <code class="inline-code">&ltreturn type&gt (*&ltpointer name&gt)(&ltparameter types&gt)</code> <br>
+        Example: <code class="inline-code">int (*computeArea)(int, int);</code>
+    </p>
+
+    <p>
+        To initalize a function pointer, we can assign the pointer with the address of the function:
+    </p>
+    {% include "partials/blog1/code1.html" %}
+
+    <p>
+        By layering structs and having function pointers as some of their components, we can replicate some concepts of the OOP paradigm in C:
+    </p>
+    {% include "partials/blog1/code2.html" %}
+
+    <p>
+        If a function can have a pointer variable to it, then it can also be passed to a function. This is called a callback function. The parameter to pass a function pointer follows the same concept as declaring a function pointer, except a parameter name will be used.
+    </p>
+    {% include "partials/blog1/code3.html" %}
+
+    <p>
+        In conclusion, a function pointer is a pointer that stores the address of the function specified while a callback function is a function pointer passed into a function that will use it to allow the parent function to have different behaviors without changing its core algorithm.
+    </p>
+
+</section>
+
+<section>
+    <h3>References:</h3>
+    <ul>
+        <li>https://www.geeksforgeeks.org/c/function-pointer-in-c/</li>
+        <li>https://levelup.gitconnected.com/uml-in-c-language-class-diagrams-6ed11aa34d9b</li>
+        <li>https://www.geeksforgeeks.org/c/callbacks-in-c/</li>
+    </ul>
+</section>

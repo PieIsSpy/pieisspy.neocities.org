@@ -1,0 +1,33 @@
+<pre class="code"><code>
+int pkStarstorm(int damage) {
+    return 50 * damage;
+}
+
+int pkFlash(int damage) {
+    int random = rand();
+    if (random > 50)
+        return 100 * damage;
+    else
+        return 0;
+}
+
+int pkBeam(int damage) {
+    int min = 1;
+    int max = 50;
+    int random = (rand() % (max - min + 1)) + min;
+
+    return 2000 + damage * random;
+}
+
+int attack(int (*callback)(int), int damage) {
+    return callback(damage);
+}
+
+int main() {
+    printf("pkStarstorm = %d\n", attack(pkStarstorm, 50));
+    printf("pkFlash = %d\n", attack(pkFlash, 50));
+    printf("pkBeam = %d\n", attack(pkBeam, 50));
+	
+    return 0;
+}
+</code></pre>
