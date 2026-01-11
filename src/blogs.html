@@ -1,0 +1,12 @@
+---
+title: 'PieIsSpy'
+layout: 'layouts/base.html'
+---
+<section>
+    <h2>Blogs</h2>
+    <ul>
+        {% for item in blogs %}
+            <li><a>{{ item.text }} - {{ item.date }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
