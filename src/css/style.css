@@ -11,6 +11,12 @@ body {
 
     font-family: "Open Sans", "Segoe UI";
     font-size: small;
+
+    background-image: url("https://i.redd.it/jcaq7gsamypc1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header, footer {
@@ -29,14 +35,11 @@ header, footer {
 }
 
 section, #navigation, #footer-links {
-    border: 3px solid rgba(135, 206, 235, 0.6);
-    background-color: rgba(127, 238, 238, 0.6);
-}
-
-section, #navigation, #footer-links {
     border-radius: 10px;
     backdrop-filter: blur(2px);
-    border-radius: 10px;
+
+    border: 3px solid rgba(135, 206, 235, 0.6);
+    background-color: rgba(127, 238, 238, 0.6);
 
     padding: 10px;
 }
@@ -55,14 +58,6 @@ footer {
     gap: 10px;
 
     padding: 5px;
-}
-
-body {
-    background-image: url("https://i.redd.it/jcaq7gsamypc1.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #content {
