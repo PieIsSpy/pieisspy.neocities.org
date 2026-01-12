@@ -12,11 +12,25 @@ body {
     font-family: "Open Sans", "Segoe UI";
     font-size: small;
 
-    background-image: url("https://i.redd.it/jcaq7gsamypc1.png");
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/047/160/908/original/pxsprite-space.gif?1646911392");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+p, h1, h2, h3, li{
+    color: white;
+}
+
+a:link {
+    text-decoration: underline;
+    color: wheat;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: burlywood;
 }
 
 header, footer {
@@ -38,8 +52,8 @@ section, #navigation, #footer-links {
     border-radius: 10px;
     backdrop-filter: blur(2px);
 
-    border: 3px solid rgba(135, 206, 235, 0.6);
-    background-color: rgba(127, 238, 238, 0.6);
+    border: 3px solid rgba(59, 0, 117, 0.6);
+    background-color: rgba(86, 0, 172, 0.6);
 
     padding: 10px;
 }
@@ -56,8 +70,6 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
-    padding: 5px;
 }
 
 #content {
