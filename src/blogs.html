@@ -3,10 +3,12 @@ title: 'PieIsSpy'
 layout: 'layouts/base.html'
 ---
 <section>
-    <h2>Blogs</h2>
-    <ul>
-        {% for item in blogs %}
-            <li><a href="blogs/blog{{ blogs.length - loop.index0 }}.html">{{ item.text }} - {{ item.date }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="inner">
+        <h2>Blogs</h2>
+        <ul>
+            {% for item in blogs %}
+                <li><a href="blogs/blog{{ blogs.length - loop.index0 }}.html">{{ item.text }} - {{ item.date }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>

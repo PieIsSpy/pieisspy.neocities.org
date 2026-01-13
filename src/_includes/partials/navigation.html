@@ -1,8 +1,10 @@
 <div id="navigation">
-    <h2>Navigation</h2>
-    <ul>
-        {% for item in navigation %}
-            <li><a href="/{{ item.text }}.html">{{ item.text }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="inner">
+        <h2>Navigation</h2>
+        <ul>
+            {% for item in navigation %}
+                <li><a href="/{{ item.text }}.html">{{ item.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

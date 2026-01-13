@@ -1,12 +1,14 @@
 <footer>
     <div id="footer-links">
-        <p>
-            © PieIsSpy 2026
-            {% for item in footer %}
-                <span>
-                    <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
-                </span>
-            {% endfor %}
-        </p>
+        <div class="inner">
+            <p>
+                © PieIsSpy 2026
+                {% for item in footer %}
+                    <span>
+                        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+                    </span>
+                {% endfor %}
+            </p>
+        </div>
     </div>
 </footer>
