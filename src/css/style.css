@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
     display: flex;
@@ -9,7 +9,7 @@ body {
     margin-left: 250px;
     margin-right: 250px;
 
-    font-family: "Open Sans", "Segoe UI";
+    font-family: "VT323", "Segoe UI";
     font-size: small;
 
     background-image: url("https://cdna.artstation.com/p/assets/images/images/047/160/908/original/pxsprite-space.gif?1646911392");
@@ -21,6 +21,22 @@ body {
 
 p, h1, h2, h3, li{
     color: white;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+}
+
+p, li {
+    font-size: medium;
 }
 
 a:link {
@@ -51,11 +67,120 @@ header, footer {
 section, #navigation, #footer-links {
     border-radius: 10px;
     backdrop-filter: blur(2px);
+    
+    background-color: rgba(86, 0, 172, 0.5);
 
-    border: 3px solid rgba(59, 0, 117, 0.6);
-    background-color: rgba(86, 0, 172, 0.6);
+    clip-path: polygon(
+        0px calc(100% - 28px),
+        4px calc(100% - 28px),
+        4px calc(100% - 20px),
+        8px calc(100% - 20px),
+        8px calc(100% - 12px),
+        12px calc(100% - 12px),
+        12px calc(100% - 8px),
+        20px calc(100% - 8px),
+        20px calc(100% - 4px),
+        28px calc(100% - 4px),
+        28px 100%,
+        calc(100% - 28px) 100%,
+        calc(100% - 28px) calc(100% - 4px),
+        calc(100% - 20px) calc(100% - 4px),
+        calc(100% - 20px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 20px),
+        calc(100% - 4px) calc(100% - 20px),
+        calc(100% - 4px) calc(100% - 28px),
+        100% calc(100% - 28px),
+        100% 28px,
+        calc(100% - 4px) 28px,
+        calc(100% - 4px) 20px,
+        calc(100% - 8px) 20px,
+        calc(100% - 8px) 12px,
+        calc(100% - 12px) 12px,
+        calc(100% - 12px) 8px,
+        calc(100% - 20px) 8px,
+        calc(100% - 20px) 4px,
+        calc(100% - 28px) 4px,
+        calc(100% - 28px) 0px,
+        28px 0px,
+        28px 4px,
+        20px 4px,
+        20px 8px,
+        12px 8px,
+        12px 12px,
+        8px 12px,
+        8px 20px,
+        4px 20px,
+        4px 28px,
+        0px 28px
+    );
 
     padding: 10px;
+}
+
+.inner {
+    background-color: rgba(37, 0, 74, 0.8);
+    /* padding: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    clip-path: polygon(
+        0px calc(100% - 28px),
+        4px calc(100% - 28px),
+        4px calc(100% - 20px),
+        8px calc(100% - 20px),
+        8px calc(100% - 12px),
+        12px calc(100% - 12px),
+        12px calc(100% - 8px),
+        20px calc(100% - 8px),
+        20px calc(100% - 4px),
+        28px calc(100% - 4px),
+        28px 100%,
+        calc(100% - 28px) 100%,
+        calc(100% - 28px) calc(100% - 4px),
+        calc(100% - 20px) calc(100% - 4px),
+        calc(100% - 20px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 20px),
+        calc(100% - 4px) calc(100% - 20px),
+        calc(100% - 4px) calc(100% - 28px),
+        100% calc(100% - 28px),
+        100% 28px,
+        calc(100% - 4px) 28px,
+        calc(100% - 4px) 20px,
+        calc(100% - 8px) 20px,
+        calc(100% - 8px) 12px,
+        calc(100% - 12px) 12px,
+        calc(100% - 12px) 8px,
+        calc(100% - 20px) 8px,
+        calc(100% - 20px) 4px,
+        calc(100% - 28px) 4px,
+        calc(100% - 28px) 0px,
+        28px 0px,
+        28px 4px,
+        20px 4px,
+        20px 8px,
+        12px 8px,
+        12px 12px,
+        8px 12px,
+        8px 20px,
+        4px 20px,
+        4px 28px,
+        0px 28px
+    );
+}
+
+#footer-links .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 section {
@@ -77,14 +202,15 @@ footer {
 }
 
 #navigation {
-    width: 130px;
+    width: 170px;
 }
 
 .code, .inline-code {
     border: 1px solid gray;
     border-radius: 3px;
-    background-color: rgba(255, 213, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
+    color: white;
 }
 
 .code {
