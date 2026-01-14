@@ -8,8 +8,8 @@ layout: 'layouts/base.html'
         {% for item in changelogs %}
             <h3>{{ item.version }} - {{ item.date }}</h3>
             <ul>
-                {% for logs in item.logs %}
-                    <li>{{ logs }}</li>
+                {% for log in item.logs %}
+                    <li>{{ log }}</li>
                 {% endfor %}
             </ul>
         {% endfor %}
