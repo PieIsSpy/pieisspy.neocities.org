@@ -1,0 +1,66 @@
+[
+    [
+        {
+            "pokemon": "swampert",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/260.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/260.ogg"
+        },
+        {
+            "pokemon": "gardevoir",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/282.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/282.ogg"
+        },
+        {
+            "pokemon": "sableye",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/302.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/302.ogg"
+        },
+        {
+            "pokemon": "crobat",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/169.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/169.ogg"
+        },
+        {
+            "pokemon": "hariyama",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/297.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/297.ogg"
+        },
+        {
+            "pokemon": "manectric",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/310.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/310.ogg"
+        }
+    ],
+    [
+        {
+            "pokemon": "venusaur",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/3.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/3.ogg"
+        },
+        {
+            "pokemon": "dodrio",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/85.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/85.ogg"
+        },
+        {
+            "pokemon": "nidoking",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/34.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/34.ogg"
+        },
+        {
+            "pokemon": "snorlax",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/143.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/143.ogg"
+        },
+        {
+            "pokemon": "lapras",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/131.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/131.ogg"
+        },
+        {
+            "pokemon": "jolteon",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/135.png",
+            "cry": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/135.ogg"
+        }
+    ]
+]
