@@ -1,0 +1,25 @@
+---
+title: 'PieIsSpy'
+layout: 'layouts/base.html'
+---
+<section>
+    <div class="inner">
+        <h2>Pokemon Emerald - 3/27/2025</h2>
+        <div class="team">
+            {% for member in hall_of_fame[0] %}
+                <img src="{{ member.sprite }}">
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="inner">
+        <h2>Pokemon Fire Red - 4/5/2025</h2>
+        <div class="team">
+            {% for member in hall_of_fame[1] %}
+                <img src="{{ member.sprite }}">
+            {% endfor %}
+        </div>
+    </div>
+</section>
