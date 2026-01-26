@@ -1,10 +1,10 @@
 <div id="navigation">
     <div class="inner">
         <h2>Navigation</h2>
-        <ul>
+        <div class="links">
             {% for item in navigation %}
-                <li><a href="/{{ item.text }}.html">{{ item.text }}</a></li>
+                <a href="/{{ item.text }}.html">{{ item.text }}</a>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
