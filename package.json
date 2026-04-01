@@ -4,7 +4,7 @@
   "description": "A personal website for many things",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node cleaner.js && npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
