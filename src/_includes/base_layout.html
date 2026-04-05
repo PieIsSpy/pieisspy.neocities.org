@@ -11,18 +11,11 @@
     </header>
 
     <main>
-        <nav>
-            Blogs
-            Changelogs
-        </nav>
+        {% include "partials/_nav.html" %}
 
         {{content}}
     </main>
 
-    <footer>
-        <a href="https://github.com/PieIsSpy" target="_blank" rel="noopener noreferrer">©PieIsSpy</a>
-        <a href="https://neocities.org/site/pieisspy" target="_blank" rel="noopener noreferrer">Neocities</a>
-        <a href="https://github.com/PieIsSpy/pieisspy.neocities.org" target="_blank" rel="noopener noreferrer">Source Code</a>
-    </footer>
+    {% include "partials/_footer.html" %}
 </body>
 </html>
