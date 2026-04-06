@@ -7,3 +7,14 @@ layout: base_layout.html
 </section>
 
 {{ content }}
+
+{% if references.length > 0 %}
+<section>
+    <h3>References:</h3>
+    <ul>
+        {% for link in references %}
+            <li><a href={{link}} target="_blank" rel="noopener noreferrer">{{link}}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
