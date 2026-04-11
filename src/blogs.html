@@ -1,4 +1,12 @@
 ---
 layout: base_layout.html
 ---
-blogs
+<section>
+    <h2>Blogs</h2>
+
+    <li>
+        {% for blog in collections.blog reversed %}
+            <ul><a href="{{blog.url}}">{{blog.data.title}} - {{blog.date}}</a></ul>
+        {% endfor %}
+    </li>
+</section>
