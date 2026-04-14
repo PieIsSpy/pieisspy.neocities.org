@@ -1,0 +1,32 @@
+[
+    {
+        "date": "2025-01-06",
+        "version": "v1.0.1",
+        "changes": [
+            "added containers for sections inside main content",
+            "reduced navbar's height",
+            "changed blogs' format for uniformity"
+        ]
+    },
+    {
+        "date": "2025-12-20",
+        "version": "v1.0",
+        "changes": [
+            "added templating system to all pages"
+        ]
+    },
+    {
+        "date": "2025-12-16",
+        "version": "v0.2",
+        "changes": [
+            "added css layout styling for homepage"
+        ]
+    },
+    {
+        "date": "2025-12-15",
+        "version": "v0.1",
+        "changes": [
+            "added blog pages and changelogs page"
+        ]
+    }
+]

@@ -1,4 +1,14 @@
 ---
 layout: base_layout.html
 ---
-Changelogs
+<section>
+    <h2>Changelogs</h2>
+    {% for log in changelogs | reverse %}
+        <h3>{{log.version}} - {{log.date}}</h3>
+        <ul>
+            {% for change in log.changes %}
+                <li>{{change}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</section>
