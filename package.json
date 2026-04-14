@@ -4,7 +4,8 @@
   "description": "A personal website for many things",
   "main": "index.js",
   "scripts": {
-    "dev": "node cleaner.js && npx @11ty/eleventy --serve"
+    "dev": "node cleaner.js && npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
