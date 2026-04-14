@@ -28,30 +28,49 @@ nav, section {
 }
 
 .middle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    @media (min-width:801px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
     width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
     gap: 5px;
 }
 
 main {
+    @media (min-width:801px) {
+        width: 85%;
+    }
     display: flex;
     flex-direction: column;
-    width: 85%;
     gap: 5px;
 }
 
 nav {
     display: flex;
-    flex-direction: column;
-    width: 10%;
+    
+    @media (min-width:801px) {
+        flex-direction: column;
+        width: 10%;
+    }
+
+    @media (max-width: 800px) {
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        h3 {
+            display: none;
+        }
+    }
 }
 
 img {
-    width: 50%;
+    width: 100%;
+    @media (min-width:801px) {
+        width: 50%;
+    }
 }
 
 pre {
