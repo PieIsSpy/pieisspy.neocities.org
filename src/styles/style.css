@@ -1,10 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/nintendo-ds-bios');
-@import url('https://fonts.cdnfonts.com/css/lcd-display-grid');
+/* @import url('https://fonts.cdnfonts.com/css/nintendo-ds-bios'); */
+/* @import url('https://fonts.cdnfonts.com/css/lcd-display-grid'); */
 
 body {
     background-image: url('https://cdn2.steamgriddb.com/hero_thumb/0a06eb93b7d29e8d9b1891eec932ba2a.jpg');
 
-    font-family: 'Nintendo DS BIOS', sans-serif;
+    font-family: sans-serif;
     font-size: large;
 }
 
@@ -14,7 +14,7 @@ header, footer {
 }
 
 header {
-    font-family: 'LCD Display Grid', sans-serif;
+    font-family: sans-serif;
     font-size: medium;
 }
 
